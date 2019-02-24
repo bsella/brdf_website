@@ -49,8 +49,7 @@
 						<div class="hero-copy">
 	                        <h1 class="hero-title mt-0">Exploration de l’espace des BRDFs pour la modélisation de matériaux</h1>
 	                        <p class="hero-paragraph">
-	                        	Nous avons implémenté le papier "A Versatile Parameterization for Measured Material Manifolds"
-								de [Soler et al., 2018] dans le logiciel "BRDF Explorer" de Disney.
+	                        	Ce site présente les logiciels que notre équipe a produit dans le cadre du projet de fin d'année de M2 Informatique Graphique & Analyse d'Image à l'Université Paul Sabatier de Toulouse.
                         	</p>
 						</div>
 						<div class="hero-app">
@@ -103,7 +102,7 @@
 								    </g>
 								</svg>
 							</div>
-							<img class="device-mockup" src="images/brdfExplorer.png" alt="L'Explorateur des BRDFs">
+							<img class="device-mockup" src="images/brdfExplorer.png" alt="BRDF Explorer">
                             <div class="hero-app-dots hero-app-dots-1">
 								<svg width="124" height="75" xmlns="http://www.w3.org/2000/svg">
 								    <g fill="none" fill-rule="evenodd">
@@ -138,30 +137,373 @@
                         <div class="newsletter-header text-center">
                             <h2 class="section-title mt-0">L'Objectif du Projet</h2>
                             <p class="section-paragraph">
-	                        	Nous avons implémenté le papier "A Versatile Parameterization for Measured Material Manifolds"
-								de [Soler et al., 2018] dans le logiciel "BRDF Explorer" de Disney.
+	                        	Le projet trouve son origine dans le papier de recherche <a href="https://hal.inria.fr/hal-01702722">"A Versatile Parameterization for Measured Material Manifolds"
+								de [Soler et al., 2018]</a>
 	                        </p>
 	                        <p>
-	                        	Notre application est destinée aux graphistes. Les graphiques créent des scènes 3D, avec des objets. Ils peuvent choisir d'assigner un matériaux, une BRDF, à ces objets.
+	                        	Notre application permet la génération et manipulation de matériaux pour le rendu 3D physiquement réaliste à partir d'une interface intuitive et ergonomique.</br>Elle est destinée aussi bien aux graphistes 3D souhaitant choisir des aspects de matériaux, qu'à des fins de recherche sur les modèles de BRDFs : modèles de réflectance  de la lumière à la surface des matériaux.
 	                        </p>
-	                        <p>
-	                        	Notre application a pour but de faciliter aux graphistes le design de nouveaux matériaux.
-	                        	Dans le logiciel "BRDF Explorer 3000", il leur suffit de cliquer sur cette carte :
-                        	</p>
                             <p>
-								<img src="images/map.jpeg" alt="Carte des matériaux" title="Les graphistes cliquent sur cette carte pour visualiser la brdf à l'emplacement du clic." />
+								<img src="images/map.jpeg" alt="Carte des matériaux" title="Carte de sélection de matériaux" />
                             </p>
                             <p>
-                            	Pour visualiser le matériaux correspondant à l'emplacement du clic.
+                            	Carte de sélection de matériaux
                             </p>
                             <p>
-								<img src="images/captureBRDFExplorer.png" alt="BRDF Explorer" title="Interface du logiciel BRDF Explorer" />
+                                Notre solution à été intégrée dans le logiciel libre <a href="https://www.disneyanimation.com/technology/brdf.html">BRDF Explorer</a> de Disney.</br>
+                                Pour y parvenir, nous avons développé un autre programme, <strong>BRDF 3000</strong> qui permet la création des différents éléments sur lesquels cette solution repose.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
+           <section class="features section">
+                <div class="container">
+					<div class="features-inner section-inner has-bottom-divider">
+						<h2 class="section-title mt-0">
+						<img src="images/brdfChef.png" alt="brdfChef" title="brdfChef" />BRDF 3000 </h2>
+                        <div class="features-wrap">
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+										    <defs>
+										        <linearGradient x1="0%" y1="100%" x2="50%" y2="0%" id="feature-1-a">
+										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
+										            <stop stop-color="#47A1F9" stop-opacity=".16" offset="100%"/>
+										        </linearGradient>
+										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-1-b">
+										            <stop stop-color="#FDFFDA" offset="0%"/>
+										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
+										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
+										        </linearGradient>
+										    </defs>
+										    <g fill="none" fill-rule="evenodd">
+										        <path d="M24 48H0V24C0 10.745 10.745 0 24 0h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-1-a)"/>
+										        <path d="M40 64H16V40c0-13.255 10.745-24 24-24h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-1-b)"/>
+										    </g>
+										</svg>
+                                    </div>
+                                    <h3 class="feature-title mt-24">Paramétrisation de l'espace des BRDFs</h3>
+                                    <p class="text-sm mb-0">Grâce à l'algorithme de Hooke & Jeeves, le programme est capable de générer par processus gaussien une <strong>paramétrisation optimisée de l'espace de BRDFs</strong>.</br>Cette paramétrisation est calculée à partir de la <a href="https://www.merl.com/brdf/">base de donnée MERL</a> et le code est conçu pour pouvoir aussi fonctionner sur des bases de données plus récentes.</br>
+                                    Les matrices résultant du processus permettent d'interpoler les matériaux de la base de donnée à partir de coordonnées de l'espace paramétrique.
+                                    </p>
+                                </div>
+                            </div>
+							<div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<svg width="68" height="64" xmlns="http://www.w3.org/2000/svg">
+										    <defs>
+										        <linearGradient x1="0%" y1="100%" x2="50%" y2="0%" id="feature-2-a">
+										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
+										            <stop stop-color="#47A1F9" stop-opacity=".16" offset="100%"/>
+										        </linearGradient>
+										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-2-b">
+										            <stop stop-color="#FDFFDA" offset="0%"/>
+										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
+										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
+										        </linearGradient>
+										    </defs>
+										    <g fill="none" fill-rule="evenodd">
+										        <path d="M9.941 63.941v-24c0-13.255 10.745-24 24-24h24v24c0 13.255-10.745 24-24 24h-24z" fill="url(#feature-2-a)" transform="rotate(45 33.941 39.941)"/>
+										        <path d="M16 0v24c0 13.255 10.745 24 24 24h24V24C64 10.745 53.255 0 40 0H16z" fill="url(#feature-2-b)"/>
+										    </g>
+										</svg>
+                                    </div>
+                                    <h3 class="feature-title mt-24">Rapidité des traitements</h3>
+                                    <p class="text-sm mb-0">Le processus d'optimisation produisant la paramétrisation est implémenté de manière très <strong>efficace</strong> et converge vers un optimum local en <strong>moins d'une minute</strong>.</br>Le code est largement parallélisé et utilise les formules de Sherman Morisson pour mettre à jour les matrices inverses et leurs déterminants.</p>
+                                </div>
+                            </div>
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+										    <defs>
+										        <linearGradient x1="50%" y1="100%" x2="50%" y2="43.901%" id="feature-3-a">
+										            <stop stop-color="#F97059" stop-opacity=".798" offset="0%"/>
+										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
+										        </linearGradient>
+										        <linearGradient x1="58.893%" y1="100%" x2="58.893%" y2="18.531%" id="feature-3-b">
+										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
+										            <stop stop-color="#47A1F9" stop-opacity="0" offset="100%"/>
+										        </linearGradient>
+										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-3-c">
+										            <stop stop-color="#FDFFDA" offset="0%"/>
+										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
+										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
+										        </linearGradient>
+										    </defs>
+										    <g fill="none" fill-rule="evenodd">
+										        <path fill="url(#feature-3-a)" opacity=".32" d="M0 24h64v40H0z"/>
+										        <path fill="url(#feature-3-b)" d="M40 24H24L0 64h64z"/>
+										        <path d="M10 10v22c0 12.15 9.85 22 22 22h22V32c0-12.15-9.85-22-22-22H10z" fill="url(#feature-3-c)" transform="rotate(45 32 32)"/>
+										    </g>
+										</svg>
+                                    </div>
+                                    <h3 class="feature-title mt-24">Haute précision et résultats de qualité</h3>
+                                    <p class="text-sm mb-0">Notre code est compatible avec les types flottants sur 128 bits de la librairie boost et produit grâce à eux d'excellents résultats de paramétrisation : <strong>seulement 10^-41 d'erreur de reconstruction sur les données.</strong> </p>
+                                </div>
+                            </div>
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+										    <defs>
+										        <linearGradient x1="0%" y1="100%" x2="50%" y2="0%" id="feature-4-a">
+										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
+										            <stop stop-color="#47A1F9" stop-opacity=".16" offset="100%"/>
+										        </linearGradient>
+										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-4-b">
+										            <stop stop-color="#FDFFDA" offset="0%"/>
+										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
+										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
+										        </linearGradient>
+										    </defs>
+										    <g fill="none" fill-rule="evenodd">
+										        <path d="M24 64H0V40c0-13.255 10.745-24 24-24h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-4-a)" transform="matrix(-1 0 0 1 48 0)"/>
+										        <path d="M40 48H16V24C16 10.745 26.745 0 40 0h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-4-b)"/>
+										    </g>
+										</svg>
+                                    </div>
+                                    <h3 class="feature-title mt-24">Représentation de l'espace paramétrique</h3>
+                                    <p class="text-sm mb-0">Le programme est capable de calculer une image représentant les paramétrisation de dimension 2 en échantillonnant le spectre de l'albedo des BRDFs en chaque pixel.</p>
+                                </div>
+                            </div>
+							<div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+										    <defs>
+										        <linearGradient x1="0%" y1="100%" x2="50%" y2="0%" id="feature-5-a">
+										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
+										            <stop stop-color="#47A1F9" stop-opacity=".16" offset="100%"/>
+										        </linearGradient>
+										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-5-b">
+										            <stop stop-color="#FDFFDA" offset="0%"/>
+										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
+										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
+										        </linearGradient>
+										    </defs>
+										    <g fill="none" fill-rule="evenodd">
+										        <path d="M24 63H0V39c0-13.255 10.745-24 24-24h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-5-a)" transform="matrix(-1 0 0 1 48 0)"/>
+										        <path d="M40 48H16V24C16 10.745 26.745 0 40 0h24v24c0 13.255-10.745 24-24 24" fill-opacity=".24" fill="url(#feature-5-a)" transform="matrix(-1 0 0 1 80 0)"/>
+										        <path d="M10.113 10.113v22c0 12.15 9.85 22 22 22h22v-22c0-12.15-9.85-22-22-22h-22z" fill="url(#feature-5-b)" transform="rotate(45 32.113 32.113)"/>
+										    </g>
+										</svg>
+                                    </div>
+                                    <h3 class="feature-title mt-24">Flexibilité par rapport aux ressources</h3>
+                                    <p class="text-sm mb-0">Dans le cas où l'utilisateur ne dispose pas des 13Gb de mémoire vive nécessaires au calculs, notre programme met à disposition une approche économe de la manipulation des grosses matrices qui charge les données à partir du disque uniquement lorsqu'elle sont nécessaire. Le temps du processus d'optimisation en lui même reste inchangé.</p>
+                                </div>
+                            </div>
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+										    <defs>
+										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-6-a">
+										            <stop stop-color="#FDFFDA" offset="0%"/>
+										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
+										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
+										        </linearGradient>
+										        <linearGradient x1="58.893%" y1="100%" x2="58.893%" y2="18.531%" id="feature-6-b">
+										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
+										            <stop stop-color="#47A1F9" stop-opacity="0" offset="100%"/>
+										        </linearGradient>
+										    </defs>
+										    <g fill="none" fill-rule="evenodd">
+										        <path d="M24 48H0V24C0 10.745 10.745 0 24 0h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-6-a)"/>
+										        <path fill-opacity=".64" fill="url(#feature-6-b)" d="M24 29.229h40V64H0z"/>
+										    </g>
+										</svg>
+                                    </div>
+                                    <h3 class="feature-title mt-24">Code C++ moderne</h3>
+                                    <p class="text-sm mb-0">Notre programme est entièrement développé en C++ moderne et dispose d'une architecture modulaire à la fois sécurisée et souple aux modifications.</br>Il repose sur la librarie Eigen pour le calcul matriciel.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+           <section class="features section">
+                <div class="container">
+					<div class="features-inner section-inner has-bottom-divider">
+						<h2 class="section-title mt-0"><img src="images/lilbrdfExplorer.png" alt="brdfExplorer" title="brdfExplorer" />BRDF Explorer 3000</h2>
+                        <div class="features-wrap">
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+										    <defs>
+										        <linearGradient x1="0%" y1="100%" x2="50%" y2="0%" id="feature-1-a">
+										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
+										            <stop stop-color="#47A1F9" stop-opacity=".16" offset="100%"/>
+										        </linearGradient>
+										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-1-b">
+										            <stop stop-color="#FDFFDA" offset="0%"/>
+										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
+										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
+										        </linearGradient>
+										    </defs>
+										    <g fill="none" fill-rule="evenodd">
+										        <path d="M24 48H0V24C0 10.745 10.745 0 24 0h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-1-a)"/>
+										        <path d="M40 64H16V40c0-13.255 10.745-24 24-24h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-1-b)"/>
+										    </g>
+										</svg>
+                                    </div>
+                                    <h3 class="feature-title mt-24">Exploration de l'espace de BRDFs en deux dimensions</h3>
+                                    <p class="text-sm mb-0">L'utilisateur explore l'espace des BRDFs grâce à une carte sur laquelle sont tracées les <strong>isolignes de la luminance</strong> : elles donnent une information sur la courbure de l'espace paramétrique.</br>La couleur quant à elle rend compte du spectre moyen réfléchis par le matériau à ces coordonnées et donc une première <strong>idée de sa couleur</strong>.</p>
+                                </div>
+                            </div>
+							<div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<svg width="68" height="64" xmlns="http://www.w3.org/2000/svg">
+										    <defs>
+										        <linearGradient x1="0%" y1="100%" x2="50%" y2="0%" id="feature-2-a">
+										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
+										            <stop stop-color="#47A1F9" stop-opacity=".16" offset="100%"/>
+										        </linearGradient>
+										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-2-b">
+										            <stop stop-color="#FDFFDA" offset="0%"/>
+										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
+										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
+										        </linearGradient>
+										    </defs>
+										    <g fill="none" fill-rule="evenodd">
+										        <path d="M9.941 63.941v-24c0-13.255 10.745-24 24-24h24v24c0 13.255-10.745 24-24 24h-24z" fill="url(#feature-2-a)" transform="rotate(45 33.941 39.941)"/>
+										        <path d="M16 0v24c0 13.255 10.745 24 24 24h24V24C64 10.745 53.255 0 40 0H16z" fill="url(#feature-2-b)"/>
+										    </g>
+										</svg>
+                                    </div>
+                                    <h3 class="feature-title mt-24">Reconstruction et interpolation de matériaux</h3>
+                                    <p class="text-sm mb-0">En se repérant grâce à des points de référence, un clic sur la carte permet, après sa validation, de <strong>produire un matériau</strong> ayant un aspect entre le chrome et l'aluminium par exemple.</p>
+                                </div>
+                            </div>
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+										    <defs>
+										        <linearGradient x1="50%" y1="100%" x2="50%" y2="43.901%" id="feature-3-a">
+										            <stop stop-color="#F97059" stop-opacity=".798" offset="0%"/>
+										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
+										        </linearGradient>
+										        <linearGradient x1="58.893%" y1="100%" x2="58.893%" y2="18.531%" id="feature-3-b">
+										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
+										            <stop stop-color="#47A1F9" stop-opacity="0" offset="100%"/>
+										        </linearGradient>
+										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-3-c">
+										            <stop stop-color="#FDFFDA" offset="0%"/>
+										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
+										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
+										        </linearGradient>
+										    </defs>
+										    <g fill="none" fill-rule="evenodd">
+										        <path fill="url(#feature-3-a)" opacity=".32" d="M0 24h64v40H0z"/>
+										        <path fill="url(#feature-3-b)" d="M40 24H24L0 64h64z"/>
+										        <path d="M10 10v22c0 12.15 9.85 22 22 22h22V32c0-12.15-9.85-22-22-22H10z" fill="url(#feature-3-c)" transform="rotate(45 32 32)"/>
+										    </g>
+										</svg>
+                                    </div>
+                                    <h3 class="feature-title mt-24">Manipulation intuitive</h3>
+                                    <p class="text-sm mb-0">La manipulation de la carte est intuitive :
+                                    <ul class="text-sm mb-0">
+                                        <li>Des croix se trouvent à l'emplacement des matériaux de la base de donnée d'origine</li>
+                                        <li>Le survol de la souris fait s'afficher leur nom</li>
+                                        <li>La touche <em>ctrl</em> les affichent tous</li>
+                                        <li>La molette de la souris contrôle le zoom</li>
+                                    </ul>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+										    <defs>
+										        <linearGradient x1="0%" y1="100%" x2="50%" y2="0%" id="feature-4-a">
+										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
+										            <stop stop-color="#47A1F9" stop-opacity=".16" offset="100%"/>
+										        </linearGradient>
+										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-4-b">
+										            <stop stop-color="#FDFFDA" offset="0%"/>
+										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
+										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
+										        </linearGradient>
+										    </defs>
+										    <g fill="none" fill-rule="evenodd">
+										        <path d="M24 64H0V40c0-13.255 10.745-24 24-24h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-4-a)" transform="matrix(-1 0 0 1 48 0)"/>
+										        <path d="M40 48H16V24C16 10.745 26.745 0 40 0h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-4-b)"/>
+										    </g>
+										</svg>
+                                    </div>
+                                    <h3 class="feature-title mt-24">Flexibilité par rapport aux ressources</h3>
+                                    <p class="text-sm mb-0">Ici encore, dans le cas où l'utilisateur a le choix entre deux politiques de stockage lors de la première ouverture de la carte.
+                                    <ul class="text-sm mb-0">
+                                        <li><strong>Économe :</strong> 15 secondes de temps de reconstruction contre 700Mb de mémoire vive.</li>
+                                        <li><strong>Performant :</strong> Moins de 2 secondes pour la reconstruction au prix de 13Gb de mémoire vive.</li>
+                                    </ul>
+                                    </p>
+                                </div>
+                            </div>
+							<div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+										    <defs>
+										        <linearGradient x1="0%" y1="100%" x2="50%" y2="0%" id="feature-5-a">
+										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
+										            <stop stop-color="#47A1F9" stop-opacity=".16" offset="100%"/>
+										        </linearGradient>
+										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-5-b">
+										            <stop stop-color="#FDFFDA" offset="0%"/>
+										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
+										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
+										        </linearGradient>
+										    </defs>
+										    <g fill="none" fill-rule="evenodd">
+										        <path d="M24 63H0V39c0-13.255 10.745-24 24-24h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-5-a)" transform="matrix(-1 0 0 1 48 0)"/>
+										        <path d="M40 48H16V24C16 10.745 26.745 0 40 0h24v24c0 13.255-10.745 24-24 24" fill-opacity=".24" fill="url(#feature-5-a)" transform="matrix(-1 0 0 1 80 0)"/>
+										        <path d="M10.113 10.113v22c0 12.15 9.85 22 22 22h22v-22c0-12.15-9.85-22-22-22h-22z" fill="url(#feature-5-b)" transform="rotate(45 32.113 32.113)"/>
+										    </g>
+										</svg>
+                                    </div>
+                                    <h3 class="feature-title mt-24">Sauvegarde des matériaux reconstruits</h3>
+                                    <p class="text-sm mb-0">L'application permet d'exporter les matériaux reconstruits au format binaire, lequel pourras-être rechargé par la suite.</p>
+                                </div>
+                            </div>
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+                                    <div class="feature-icon">
+										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+										    <defs>
+										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-6-a">
+										            <stop stop-color="#FDFFDA" offset="0%"/>
+										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
+										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
+										        </linearGradient>
+										        <linearGradient x1="58.893%" y1="100%" x2="58.893%" y2="18.531%" id="feature-6-b">
+										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
+										            <stop stop-color="#47A1F9" stop-opacity="0" offset="100%"/>
+										        </linearGradient>
+										    </defs>
+										    <g fill="none" fill-rule="evenodd">
+										        <path d="M24 48H0V24C0 10.745 10.745 0 24 0h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-6-a)"/>
+										        <path fill-opacity=".64" fill="url(#feature-6-b)" d="M24 29.229h40V64H0z"/>
+										    </g>
+										</svg>
+                                    </div>
+                                    <h3 class="feature-title mt-24">Interface ergonomique</h3>
+                                    <p class="text-sm mb-0">Les traitements longs s'effectuent avec un <strong>retour visuel</strong> pour les rendre explicite et écarter toute frustration de l'expérience utilisateur.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section class="media section">
                 <div class="container-sm">
@@ -205,344 +547,7 @@
                 </div>
             </section>
 
-           <section class="features section">
-                <div class="container">
-					<div class="features-inner section-inner has-bottom-divider">
-						<h2 class="section-title mt-0">BRDF 3000</h2>
-                        <div class="features-wrap">
-                            <div class="feature is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-										    <defs>
-										        <linearGradient x1="0%" y1="100%" x2="50%" y2="0%" id="feature-1-a">
-										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
-										            <stop stop-color="#47A1F9" stop-opacity=".16" offset="100%"/>
-										        </linearGradient>
-										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-1-b">
-										            <stop stop-color="#FDFFDA" offset="0%"/>
-										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
-										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										    </defs>
-										    <g fill="none" fill-rule="evenodd">
-										        <path d="M24 48H0V24C0 10.745 10.745 0 24 0h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-1-a)"/>
-										        <path d="M40 64H16V40c0-13.255 10.745-24 24-24h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-1-b)"/>
-										    </g>
-										</svg>
-                                    </div>
-                                    <h3 class="feature-title mt-24">Le Rapport des Méthodes et Algorithmes</h3>
-                                    <p class="text-sm mb-0">Le rapport qui décrit l'objectif et les algorithmes implémentés.</p>
-                                    <a href="rapports/Methodes_et_Algorithmes_BRDF.pdf">pdf</a>
-                                </div>
-                            </div>
-							<div class="feature is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-										<svg width="68" height="64" xmlns="http://www.w3.org/2000/svg">
-										    <defs>
-										        <linearGradient x1="0%" y1="100%" x2="50%" y2="0%" id="feature-2-a">
-										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
-										            <stop stop-color="#47A1F9" stop-opacity=".16" offset="100%"/>
-										        </linearGradient>
-										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-2-b">
-										            <stop stop-color="#FDFFDA" offset="0%"/>
-										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
-										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										    </defs>
-										    <g fill="none" fill-rule="evenodd">
-										        <path d="M9.941 63.941v-24c0-13.255 10.745-24 24-24h24v24c0 13.255-10.745 24-24 24h-24z" fill="url(#feature-2-a)" transform="rotate(45 33.941 39.941)"/>
-										        <path d="M16 0v24c0 13.255 10.745 24 24 24h24V24C64 10.745 53.255 0 40 0H16z" fill="url(#feature-2-b)"/>
-										    </g>
-										</svg>
-                                    </div>
-                                    <h3 class="feature-title mt-24">Le Rapport de Spécifications</h3>
-                                    <p class="text-sm mb-0">Le rapport qui décrit la conception de nos logiciels.</p>
-                                    <a href="rapports/Specifications_BRDF.pdf">pdf</a>
-                                </div>
-                            </div>
-                            <div class="feature is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-										    <defs>
-										        <linearGradient x1="50%" y1="100%" x2="50%" y2="43.901%" id="feature-3-a">
-										            <stop stop-color="#F97059" stop-opacity=".798" offset="0%"/>
-										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										        <linearGradient x1="58.893%" y1="100%" x2="58.893%" y2="18.531%" id="feature-3-b">
-										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
-										            <stop stop-color="#47A1F9" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-3-c">
-										            <stop stop-color="#FDFFDA" offset="0%"/>
-										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
-										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										    </defs>
-										    <g fill="none" fill-rule="evenodd">
-										        <path fill="url(#feature-3-a)" opacity=".32" d="M0 24h64v40H0z"/>
-										        <path fill="url(#feature-3-b)" d="M40 24H24L0 64h64z"/>
-										        <path d="M10 10v22c0 12.15 9.85 22 22 22h22V32c0-12.15-9.85-22-22-22H10z" fill="url(#feature-3-c)" transform="rotate(45 32 32)"/>
-										    </g>
-										</svg>
-                                    </div>
-                                    <h3 class="feature-title mt-24">Le Rapport de Recette</h3>
-                                    <p class="text-sm mb-0">Le rapport qui décrit l'application, dont le manuel d'utilisation des logiciels.</p>
-                                    <a href="rapports/Recette_BRDF.pdf">pdf</a>
-                                </div>
-                            </div>
-                            <div class="feature is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-										    <defs>
-										        <linearGradient x1="0%" y1="100%" x2="50%" y2="0%" id="feature-4-a">
-										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
-										            <stop stop-color="#47A1F9" stop-opacity=".16" offset="100%"/>
-										        </linearGradient>
-										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-4-b">
-										            <stop stop-color="#FDFFDA" offset="0%"/>
-										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
-										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										    </defs>
-										    <g fill="none" fill-rule="evenodd">
-										        <path d="M24 64H0V40c0-13.255 10.745-24 24-24h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-4-a)" transform="matrix(-1 0 0 1 48 0)"/>
-										        <path d="M40 48H16V24C16 10.745 26.745 0 40 0h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-4-b)"/>
-										    </g>
-										</svg>
-                                    </div>
-                                    <h3 class="feature-title mt-24">Discover</h3>
-                                    <p class="text-sm mb-0">A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design.</p>
-                                </div>
-                            </div>
-							<div class="feature is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-										    <defs>
-										        <linearGradient x1="0%" y1="100%" x2="50%" y2="0%" id="feature-5-a">
-										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
-										            <stop stop-color="#47A1F9" stop-opacity=".16" offset="100%"/>
-										        </linearGradient>
-										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-5-b">
-										            <stop stop-color="#FDFFDA" offset="0%"/>
-										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
-										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										    </defs>
-										    <g fill="none" fill-rule="evenodd">
-										        <path d="M24 63H0V39c0-13.255 10.745-24 24-24h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-5-a)" transform="matrix(-1 0 0 1 48 0)"/>
-										        <path d="M40 48H16V24C16 10.745 26.745 0 40 0h24v24c0 13.255-10.745 24-24 24" fill-opacity=".24" fill="url(#feature-5-a)" transform="matrix(-1 0 0 1 80 0)"/>
-										        <path d="M10.113 10.113v22c0 12.15 9.85 22 22 22h22v-22c0-12.15-9.85-22-22-22h-22z" fill="url(#feature-5-b)" transform="rotate(45 32.113 32.113)"/>
-										    </g>
-										</svg>
-                                    </div>
-                                    <h3 class="feature-title mt-24">Discover</h3>
-                                    <p class="text-sm mb-0">A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design.</p>
-                                </div>
-                            </div>
-                            <div class="feature is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-										    <defs>
-										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-6-a">
-										            <stop stop-color="#FDFFDA" offset="0%"/>
-										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
-										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										        <linearGradient x1="58.893%" y1="100%" x2="58.893%" y2="18.531%" id="feature-6-b">
-										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
-										            <stop stop-color="#47A1F9" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										    </defs>
-										    <g fill="none" fill-rule="evenodd">
-										        <path d="M24 48H0V24C0 10.745 10.745 0 24 0h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-6-a)"/>
-										        <path fill-opacity=".64" fill="url(#feature-6-b)" d="M24 29.229h40V64H0z"/>
-										    </g>
-										</svg>
-                                    </div>
-                                    <h3 class="feature-title mt-24">Discover</h3>
-                                    <p class="text-sm mb-0">A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-           <section class="features section">
-                <div class="container">
-					<div class="features-inner section-inner has-bottom-divider">
-						<h2 class="section-title mt-0">BRDF Explorer 3000</h2>
-                        <div class="features-wrap">
-                            <div class="feature is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-										    <defs>
-										        <linearGradient x1="0%" y1="100%" x2="50%" y2="0%" id="feature-1-a">
-										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
-										            <stop stop-color="#47A1F9" stop-opacity=".16" offset="100%"/>
-										        </linearGradient>
-										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-1-b">
-										            <stop stop-color="#FDFFDA" offset="0%"/>
-										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
-										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										    </defs>
-										    <g fill="none" fill-rule="evenodd">
-										        <path d="M24 48H0V24C0 10.745 10.745 0 24 0h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-1-a)"/>
-										        <path d="M40 64H16V40c0-13.255 10.745-24 24-24h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-1-b)"/>
-										    </g>
-										</svg>
-                                    </div>
-                                    <h3 class="feature-title mt-24">Le Rapport des Méthodes et Algorithmes</h3>
-                                    <p class="text-sm mb-0">Le rapport qui décrit l'objectif et les algorithmes implémentés.</p>
-                                    <a href="rapports/Methodes_et_Algorithmes_BRDF.pdf">pdf</a>
-                                </div>
-                            </div>
-							<div class="feature is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-										<svg width="68" height="64" xmlns="http://www.w3.org/2000/svg">
-										    <defs>
-										        <linearGradient x1="0%" y1="100%" x2="50%" y2="0%" id="feature-2-a">
-										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
-										            <stop stop-color="#47A1F9" stop-opacity=".16" offset="100%"/>
-										        </linearGradient>
-										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-2-b">
-										            <stop stop-color="#FDFFDA" offset="0%"/>
-										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
-										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										    </defs>
-										    <g fill="none" fill-rule="evenodd">
-										        <path d="M9.941 63.941v-24c0-13.255 10.745-24 24-24h24v24c0 13.255-10.745 24-24 24h-24z" fill="url(#feature-2-a)" transform="rotate(45 33.941 39.941)"/>
-										        <path d="M16 0v24c0 13.255 10.745 24 24 24h24V24C64 10.745 53.255 0 40 0H16z" fill="url(#feature-2-b)"/>
-										    </g>
-										</svg>
-                                    </div>
-                                    <h3 class="feature-title mt-24">Le Rapport de Spécifications</h3>
-                                    <p class="text-sm mb-0">Le rapport qui décrit la conception de nos logiciels.</p>
-                                    <a href="rapports/Specifications_BRDF.pdf">pdf</a>
-                                </div>
-                            </div>
-                            <div class="feature is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-										    <defs>
-										        <linearGradient x1="50%" y1="100%" x2="50%" y2="43.901%" id="feature-3-a">
-										            <stop stop-color="#F97059" stop-opacity=".798" offset="0%"/>
-										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										        <linearGradient x1="58.893%" y1="100%" x2="58.893%" y2="18.531%" id="feature-3-b">
-										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
-										            <stop stop-color="#47A1F9" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-3-c">
-										            <stop stop-color="#FDFFDA" offset="0%"/>
-										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
-										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										    </defs>
-										    <g fill="none" fill-rule="evenodd">
-										        <path fill="url(#feature-3-a)" opacity=".32" d="M0 24h64v40H0z"/>
-										        <path fill="url(#feature-3-b)" d="M40 24H24L0 64h64z"/>
-										        <path d="M10 10v22c0 12.15 9.85 22 22 22h22V32c0-12.15-9.85-22-22-22H10z" fill="url(#feature-3-c)" transform="rotate(45 32 32)"/>
-										    </g>
-										</svg>
-                                    </div>
-                                    <h3 class="feature-title mt-24">Le Rapport de Recette</h3>
-                                    <p class="text-sm mb-0">Le rapport qui décrit l'application, dont le manuel d'utilisation des logiciels.</p>
-                                    <a href="rapports/Recette_BRDF.pdf">pdf</a>
-                                </div>
-                            </div>
-                            <div class="feature is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-										    <defs>
-										        <linearGradient x1="0%" y1="100%" x2="50%" y2="0%" id="feature-4-a">
-										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
-										            <stop stop-color="#47A1F9" stop-opacity=".16" offset="100%"/>
-										        </linearGradient>
-										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-4-b">
-										            <stop stop-color="#FDFFDA" offset="0%"/>
-										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
-										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										    </defs>
-										    <g fill="none" fill-rule="evenodd">
-										        <path d="M24 64H0V40c0-13.255 10.745-24 24-24h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-4-a)" transform="matrix(-1 0 0 1 48 0)"/>
-										        <path d="M40 48H16V24C16 10.745 26.745 0 40 0h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-4-b)"/>
-										    </g>
-										</svg>
-                                    </div>
-                                    <h3 class="feature-title mt-24">Discover</h3>
-                                    <p class="text-sm mb-0">A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design.</p>
-                                </div>
-                            </div>
-							<div class="feature is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-										    <defs>
-										        <linearGradient x1="0%" y1="100%" x2="50%" y2="0%" id="feature-5-a">
-										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
-										            <stop stop-color="#47A1F9" stop-opacity=".16" offset="100%"/>
-										        </linearGradient>
-										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-5-b">
-										            <stop stop-color="#FDFFDA" offset="0%"/>
-										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
-										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										    </defs>
-										    <g fill="none" fill-rule="evenodd">
-										        <path d="M24 63H0V39c0-13.255 10.745-24 24-24h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-5-a)" transform="matrix(-1 0 0 1 48 0)"/>
-										        <path d="M40 48H16V24C16 10.745 26.745 0 40 0h24v24c0 13.255-10.745 24-24 24" fill-opacity=".24" fill="url(#feature-5-a)" transform="matrix(-1 0 0 1 80 0)"/>
-										        <path d="M10.113 10.113v22c0 12.15 9.85 22 22 22h22v-22c0-12.15-9.85-22-22-22h-22z" fill="url(#feature-5-b)" transform="rotate(45 32.113 32.113)"/>
-										    </g>
-										</svg>
-                                    </div>
-                                    <h3 class="feature-title mt-24">Discover</h3>
-                                    <p class="text-sm mb-0">A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design.</p>
-                                </div>
-                            </div>
-                            <div class="feature is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-										    <defs>
-										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-6-a">
-										            <stop stop-color="#FDFFDA" offset="0%"/>
-										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
-										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										        <linearGradient x1="58.893%" y1="100%" x2="58.893%" y2="18.531%" id="feature-6-b">
-										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
-										            <stop stop-color="#47A1F9" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										    </defs>
-										    <g fill="none" fill-rule="evenodd">
-										        <path d="M24 48H0V24C0 10.745 10.745 0 24 0h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-6-a)"/>
-										        <path fill-opacity=".64" fill="url(#feature-6-b)" d="M24 29.229h40V64H0z"/>
-										    </g>
-										</svg>
-                                    </div>
-                                    <h3 class="feature-title mt-24">Discover</h3>
-                                    <p class="text-sm mb-0">A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+            
            <section class="features section">
                 <div class="container">
 					<div class="features-inner section-inner has-bottom-divider">
@@ -569,8 +574,8 @@
 										    </g>
 										</svg>
                                     </div>
-                                    <h3 class="feature-title mt-24">Le Rapport des Méthodes et Algorithmes</h3>
-                                    <p class="text-sm mb-0">Le rapport qui décrit l'objectif et les algorithmes implémentés.</p>
+                                    <h3 class="feature-title mt-24">Méthodes et Algorithmes</h3>
+                                    <p class="text-sm mb-0">Décrit l'objectif et les algorithmes implémentés.</p>
                                     <a href="rapports/Methodes_et_Algorithmes_BRDF.pdf">pdf</a>
                                 </div>
                             </div>
@@ -595,8 +600,8 @@
 										    </g>
 										</svg>
                                     </div>
-                                    <h3 class="feature-title mt-24">Le Rapport de Spécifications</h3>
-                                    <p class="text-sm mb-0">Le rapport qui décrit la conception de nos logiciels.</p>
+                                    <h3 class="feature-title mt-24">Spécifications</h3>
+                                    <p class="text-sm mb-0">Décrit les exigences et les grandes lignes de conception</p>
                                     <a href="rapports/Specifications_BRDF.pdf">pdf</a>
                                 </div>
                             </div>
@@ -626,85 +631,9 @@
 										    </g>
 										</svg>
                                     </div>
-                                    <h3 class="feature-title mt-24">Le Rapport de Recette</h3>
-                                    <p class="text-sm mb-0">Le rapport qui décrit l'application, dont le manuel d'utilisation des logiciels.</p>
+                                    <h3 class="feature-title mt-24">Recette</h3>
+                                    <p class="text-sm mb-0">Décrit l'ensemble du travail réalisé et fournit le manuel d'utilisation des logiciels</p>
                                     <a href="rapports/Recette_BRDF.pdf">pdf</a>
-                                </div>
-                            </div>
-                            <div class="feature is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-										    <defs>
-										        <linearGradient x1="0%" y1="100%" x2="50%" y2="0%" id="feature-4-a">
-										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
-										            <stop stop-color="#47A1F9" stop-opacity=".16" offset="100%"/>
-										        </linearGradient>
-										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-4-b">
-										            <stop stop-color="#FDFFDA" offset="0%"/>
-										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
-										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										    </defs>
-										    <g fill="none" fill-rule="evenodd">
-										        <path d="M24 64H0V40c0-13.255 10.745-24 24-24h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-4-a)" transform="matrix(-1 0 0 1 48 0)"/>
-										        <path d="M40 48H16V24C16 10.745 26.745 0 40 0h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-4-b)"/>
-										    </g>
-										</svg>
-                                    </div>
-                                    <h3 class="feature-title mt-24">Discover</h3>
-                                    <p class="text-sm mb-0">A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design.</p>
-                                </div>
-                            </div>
-							<div class="feature is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-										    <defs>
-										        <linearGradient x1="0%" y1="100%" x2="50%" y2="0%" id="feature-5-a">
-										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
-										            <stop stop-color="#47A1F9" stop-opacity=".16" offset="100%"/>
-										        </linearGradient>
-										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-5-b">
-										            <stop stop-color="#FDFFDA" offset="0%"/>
-										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
-										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										    </defs>
-										    <g fill="none" fill-rule="evenodd">
-										        <path d="M24 63H0V39c0-13.255 10.745-24 24-24h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-5-a)" transform="matrix(-1 0 0 1 48 0)"/>
-										        <path d="M40 48H16V24C16 10.745 26.745 0 40 0h24v24c0 13.255-10.745 24-24 24" fill-opacity=".24" fill="url(#feature-5-a)" transform="matrix(-1 0 0 1 80 0)"/>
-										        <path d="M10.113 10.113v22c0 12.15 9.85 22 22 22h22v-22c0-12.15-9.85-22-22-22h-22z" fill="url(#feature-5-b)" transform="rotate(45 32.113 32.113)"/>
-										    </g>
-										</svg>
-                                    </div>
-                                    <h3 class="feature-title mt-24">Discover</h3>
-                                    <p class="text-sm mb-0">A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design.</p>
-                                </div>
-                            </div>
-                            <div class="feature is-revealing">
-                                <div class="feature-inner">
-                                    <div class="feature-icon">
-										<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-										    <defs>
-										        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="feature-6-a">
-										            <stop stop-color="#FDFFDA" offset="0%"/>
-										            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
-										            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										        <linearGradient x1="58.893%" y1="100%" x2="58.893%" y2="18.531%" id="feature-6-b">
-										            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
-										            <stop stop-color="#47A1F9" stop-opacity="0" offset="100%"/>
-										        </linearGradient>
-										    </defs>
-										    <g fill="none" fill-rule="evenodd">
-										        <path d="M24 48H0V24C0 10.745 10.745 0 24 0h24v24c0 13.255-10.745 24-24 24" fill="url(#feature-6-a)"/>
-										        <path fill-opacity=".64" fill="url(#feature-6-b)" d="M24 29.229h40V64H0z"/>
-										    </g>
-										</svg>
-                                    </div>
-                                    <h3 class="feature-title mt-24">Discover</h3>
-                                    <p class="text-sm mb-0">A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design.</p>
                                 </div>
                             </div>
                         </div>
