@@ -12,34 +12,6 @@
 <body class="is-boxed has-animations">
     <div class="body-wrap boxed-container">
         <header class="site-header">
-            <div class="container">
-                <div class="site-header-inner">
-                    <div class="brand header-brand">
-                        <h1 class="m-0">
-                            <a href="#">
-								<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-									<title>BRDF 3000</title>
-								    <defs>
-								        <linearGradient x1="0%" y1="100%" x2="50%" y2="0%" id="logo-a">
-								            <stop stop-color="#F9425F" stop-opacity=".8" offset="0%"/>
-								            <stop stop-color="#47A1F9" stop-opacity=".16" offset="100%"/>
-								        </linearGradient>
-								        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="logo-b">
-								            <stop stop-color="#FDFFDA" offset="0%"/>
-								            <stop stop-color="#F97059" stop-opacity=".798" offset="49.935%"/>
-								            <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
-								        </linearGradient>
-								    </defs>
-								    <g fill="none" fill-rule="evenodd">
-								        <path d="M22 19.22c6.627 0 9.593-6.415 9.593-13.042C31.593-.45 28.627.007 22 .007S10 2.683 10 9.31c0 6.628 5.373 9.91 12 9.91z" fill="url(#logo-a)"/>
-								        <path d="M13.666 31.889c7.547 0 10.924-7.307 10.924-14.854 0-7.547-3.377-7.027-10.924-7.027C6.118 10.008 0 13.055 0 20.603c0 7.547 6.118 11.286 13.666 11.286z" fill="url(#logo-b)" transform="matrix(-1 0 0 1 24.59 0)"/>
-								    </g>
-								</svg>
-                            </a>
-                        </h1>
-                    </div>
-                </div>
-            </div>
         </header>
 
         <main>
@@ -167,6 +139,8 @@
                             <p>
                             Le programme qui cuisine le modèle mathématique de la solution et écris les données pour BRDF Explorer 3000.
                             </p>
+                            <a href="https://github.com/bsella/BRDF3000"><img src="images/github.png" alt="brdf3000git" title="brdf3000git" style="position:absolute;  margin-left:0px;"/></a>
+                            <a href="https://bsella.github.io/BRDF3000/"><img src="images/docs.png" alt="brdf3000docs" title="brdf3000docs" style="position:absolute; margin-left:50px;"/></a>
                         </div>
                         <div class="features-wrap">
                             <div class="feature is-revealing">
@@ -248,7 +222,7 @@
 										</svg>
                                     </div>
                                     <h3 class="feature-title mt-24">Haute précision et résultats de qualité</h3>
-                                    <p class="text-sm mb-0">Notre code est compatible avec les types flottants sur 128 bits de la librairie boost et produit grâce à eux d'excellents résultats de paramétrisation : <strong>seulement 10^-41 d'erreur de reconstruction sur les données.</strong> </p>
+                                    <p class="text-sm mb-0">Notre code est compatible avec les types flottants sur 128 bits de la librairie boost et produit grâce à eux d'excellents résultats de paramétrisation : <strong>seulement 10^-41 d'erreur de reconstruction sur les données</strong>.</p>
                                 </div>
                             </div>
                             <div class="feature is-revealing">
@@ -338,6 +312,8 @@
                         <div class="section-title mt-0">
                             <h2><img src="images/lilbrdfExplorer.png" alt="brdfExplorer" title="brdfExplorer" />BRDF Explorer 3000</h2>
                             <p>La version améliorée de <a href="https://www.disneyanimation.com/technology/brdf.html">BRDF Explorer de Disney</a> qui intègre notre solution.</p>
+                            <a href="https://github.com/bsella/brdf"><img src="images/github.png" alt="brdfExp3000git" title="brdfExp3000git" style="position:absolute;  margin-left:0px;"/></a>
+                            <a href="https://bsella.github.io/brdf/"><img src="images/docs.png" alt="brdfExp3000docs" title="brdfExp3000docs" style="position:absolute; margin-left:50px;"/></a>
                         </div>
                         <div class="features-wrap">
                             <div class="feature is-revealing">
@@ -518,38 +494,12 @@
                     <div class="media-inner section-inner">
                         <div class="media-header text-center">
                             <h2 class="section-title mt-0">Démonstration</h2>
-                            <p class="section-paragraph mb-0">Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.</p>
+                            <p class="section-paragraph mb-0"></p>
                         </div>
 						<div class="media-canvas">
-							<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
-							    <defs>
-							        <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="media-canvas">
-							            <stop stop-color="#06101F" offset="0%"/>
-							            <stop stop-color="#1D304B" offset="100%"/>
-							        </linearGradient>
-							    </defs>
-							    <rect width="800" height="450" rx="8" fill="url(#media-canvas)" fill-rule="evenodd"/>
-							</svg>
-							<div class="media-control">
-								<svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
-								    <defs>
-								        <linearGradient x1="87.565%" y1="15.873%" x2="17.086%" y2="80.538%" id="media-control">
-								            <stop stop-color="#FFF" stop-opacity=".64" offset="0%"/>
-								            <stop stop-color="#FFF" offset="100%"/>
-								        </linearGradient>
-										<filter x="-500%" y="-500%" width="1000%" height="1000%" filterUnits="objectBoundinFMbox" id="media-shadow">
-                                            <feOffset dy="16" in="SourceAlpha" result="shadowOffsetOuter"></feOffset>
-                                            <feGaussianBlur stdDeviation="24" in="shadowOffsetOuter" result="shadowBlurOuter"></feGaussianBlur>
-                                            <feColorMatrix values="0 0 0 0 0.024 0 0 0 0 0.064 0 0 0 0 0.12 0 0 0 0.24 0" in="shadowBlurOuter"></feColorMatrix>
-                                        </filter>
-								    </defs>
-								    <g fill="none" fill-rule="evenodd">
-								        <circle fill="#FFF" cx="48" cy="48" r="48" style="mix-blend-mode:multiply;filter:url(#media-shadow)"/>
-										<circle fill="url(#media-control)" cx="48" cy="48" r="48"/>
-								        <path d="M44.6 39.2a1.001 1.001 0 0 0-1.6.8v18a1.001 1.001 0 0 0 1.6.8l12-9a.998.998 0 0 0 0-1.6l-12-9z" fill="#1D304B"/>
-								    </g>
-								</svg>
-							</div>
+                            <video width="800" heigth="450" controls style="position:relative">
+                                <source src="images/demo.mp4" type="video/mp4">
+                            </video>
 						</div>
                     </div>
                 </div>
@@ -655,9 +605,10 @@
                         <div class="newsletter-header text-center">
                             <h2 class="section-title mt-0">L'Équipe du Projet</h2>
                             <p class="section-paragraph">
-                        		Nous sommes quatre étudiants en Master 2 Informatique Graphique et Analyse d'Images, à L'Université Paul Sabatier.
+                        		Nous sommes quatre étudiants en Master 2 Informatique Graphique et Analyse d'Images, à L'Université Paul Sabatier :</br>
+                        		<strong>Karim Salama, Adèle Saint-Denis, Adrien Grosjean & Ludovic Burg</strong>
 	                        </p>
-								<img src="images/logo_ups.jpg" alt="Université Toulouse III Paul Sabatier" title="Notre Université" />
+								<img src="images/logo_ups.jpg" alt="Université Toulouse III Paul Sabatier" title="Notre Université" style="margin-left:auto;margin-right:auto;"/>
                             </p>
                         </div>
                     </div>
